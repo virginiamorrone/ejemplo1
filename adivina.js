@@ -8,28 +8,28 @@ function adivinarNumero(){
     // Máximo de intentos permitidos
     const maxIntentos = 3;
 
-    // Variable para guardar el intento del usuario
-    let intento = null;
+    // Variable para guardar el numero ingresado del usuario
+    let datoIngresado = null;
 
     // Mientras no adivine y tenga intentos disponibles
-    while (intento !== numeroSecreto && intentos < maxIntentos) {
-    // Pedir al usuario que ingrese un número
-    intento = Number(prompt("Adivina el número (del 1 al 10):"));
+    while (datoIngresado !== numeroSecreto && intentos < maxIntentos) {
+        // Pedir al usuario que ingrese un número
+        datoIngresado = Number(prompt("Adivina el número (del 1 al 10):"));
 
-    // Aumentar el contador
-    intentos++;
+        // Aumentar el contador
+        intentos++;
 
-    // Verificar si adivinó o no
-    if (intento === numeroSecreto) {
-        alert("¡Felicitaciones! Adivinaste el número.");
-    } else if (intentos < maxIntentos) {
-        alert("No es el número correcto. Te quedan " + (maxIntentos - intentos) + " intento(s).");
-    }
+        // Verificar si adivinó o no
+        if (datoIngresado === numeroSecreto) {
+            alert("¡Felicitaciones! Adivinaste el número.");
+        } else if (intentos < maxIntentos) {
+            alert("No es el número correcto. Te quedan " + (maxIntentos - intentos) + " intento(s).");
+        }
     }
 
     // Si se acabaron los intentos y no adivinó
-    if (intento !== numeroSecreto) {
-    alert("Lo siento, se acabaron tus intentos. El número correcto era " + numeroSecreto + ".");
+    if (datoIngresado !== numeroSecreto) {
+        alert("Lo siento, se acabaron tus intentos. El número correcto era " + numeroSecreto + ".");
     }
 }
 
