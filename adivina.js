@@ -33,19 +33,8 @@ function adivinarNumero(){
     }
 }
 
-//adivinarNumero();
+adivinarNumero();
 
-function adivinarPorjs(){
-    let datoEntrada = parseInt(document.getElementById("dato").value);
-    if(datoEntrada === 7){
-        document.getElementById("p-info").textContent = "Felicitaciones, adivinaste!"
-    }
-    else{
-       document.getElementById("p-info").textContent = "Perdiste, vuelve a intentarlo!"
-    }
-}
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("btn-enviar").addEventListener("click",adivinarPorjs);
-})
+
 
 
